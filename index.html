@@ -13,7 +13,7 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #f8e7da;
+            background-color: #cf375d90;
         }
 
         #card {
@@ -29,7 +29,18 @@
 
         #heart {
             position: absolute;
-            top: 25%;
+            top: 30%;
+            left: 37%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 90px;
+            background-color: #ff4040;
+            clip-path: polygon(50% 0%, 100% 35%, 75% 100%, 50% 70%, 25% 100%, 0% 35%);
+            animation: heartbeat 1s infinite;
+        }
+        #heart1 {
+            position: absolute;
+            top: -220%;
             left: 37%;
             transform: translate(-50%, -50%);
             width: 100px;
@@ -69,23 +80,50 @@
         h2:hover{
             color: pink ;
         }
+        img{
+            position: absolute;
+            right: 80px;
+            bottom: 130px;
+            height: 140px;
+            width: 120px;
+            border-radius: 10px;
+            box-shadow: 2px 6px;
+        }
+        .para{
+            font-family: "Baloo Bhaijaan 2", sans-serif;
+            font-weight: bold ;
+            color: #0f0c0c;
+        }
+        source{
+            height: 5px;
+            width: 5px;
+        }
     </style>
 </head>
 <body>
     <div id="card" onclick="changeMessage()">
         <div id="heart"></div>
         <div id="message">
+           
             <h2>Happy Valentine's Day Kranti!</h2>
-            <p>I am yours no returns,no refunds</p>
+            <p class="para">Pathak is yours:  No Returns,no Refunds!</p>
+            <p>click to see thobda</p>
         </div>
+        <audio controls autoplay>
+            <source src="WhatsApp Audio 2024-02-14 at 19.54.50.mpeg" type="audio/ogg">
+            
+          Your browser does not support the audio element.
+          </audio>
     </div>
 
     <script>
         function changeMessage() {
             var message = document.getElementById('message');
             message.innerHTML = `
-                <h2>Thanks for Clicking!</h2>
-                <p>You're the heartbeat of my life!</p>
+            <div id="heart1"></div>
+                <h2>Mera Krantu! &#128531</h2>
+                <img src="IMG-20230417-WA0005 (2).jpg" alt="">
+                <p class="para">Jyada mat ladha karo &#128536</p>
             `;
         }
     </script>
